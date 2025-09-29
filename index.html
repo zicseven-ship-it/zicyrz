@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZICYRZ CAPITAL</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f6f8;
+      color: #2c3e50;
+    }
+
+    /* Navbar */
+    nav {
+      background: #2575fc; /* biru solid */
+      color: white;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      overflow: hidden;
+    }
+
+    .menu-icon {
+      font-size: 1.8rem;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    /* Crypto ticker berjalan */
+    #crypto-ticker {
+      overflow: hidden;
+      white-space: nowrap;
+      flex: 1;
+      margin-left: 20px;
+    }
+
+    #crypto-ticker span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 25s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* Sidebar */
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1200;
+      top: 0;
+      left: 0;
+      background-color: #2c3e50;
+      overflow-x: hidden;
+      transition: 0.4s;
+      padding-top: 60px;
+    }
+
+    .sidebar a {
+      padding: 12px 24px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      color: #f1f1f1;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #34495e;
+    }
+
+    .sidebar .closebtn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 2rem;
+      color: white;
+    }
+
+    /* Hero Section */
+    header {
+      background: linear-gradient(135deg, #6a11cb, #2575fc); /* ungu-biru */
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+
+    /* Main content */
+    main {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    main p {
+      max-width: 600px;
+      margin: 10px auto;
+      line-height: 1.6;
+    }
+
+    img {
+      margin-top: 20px;
+      max-width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Tombol sosial */
+    .social-links {
+      margin-top: 30px;
+    }
+    .social-links a {
+      display: inline-block;
+      margin: 8px;
+      padding: 12px 20px;
+      border-radius: 30px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.2s, background 0.3s;
+    }
+    .social-links a:hover {
+      transform: scale(1.05);
+    }
+    .twitter-x { background: #000; }
+    .twitter-x:hover { background: #333; }
+    .instagram { background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); }
+    .instagram:hover { opacity: 0.9; }
+    .github { background: #24292e; }
+    .github:hover { background: #000; }
+
+    /* Footer */
+    footer {
+      background: #2c3e50;
+      color: #bdc3c7;
+      padding: 15px;
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+    <div id="crypto-ticker">
+      <span>
+        BTC $ 500,000 | ETH $ 10,000 | BNB $ 5000 | XRP $ 2,500 | SOL $ 1,000 | TON $ 500 | BGB $ 250 | ASTR $ 100 | PEPE $ 1 | SHIBA $ 1
+      </span>
+    </div>
+  </nav>
+
+  <!-- Sidebar Menu -->
+  <div id="sidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="portofolio.html">Portofolio</a>
+  </div>
+
+  <!-- Hero -->
+  <header>
+    <h1>ZICYRZ CAPITAL</h1>
+  </header>
+  <!-- Main -->
+  <main>
+    <p>ZICYRZ CAPITAL adalah sebuah sebuah investor kecil yang fokus pada aset digital, kripto, dan peluang investasi jangka panjang. Dimulai dari langkah sederhana, namun dengan visi untuk tumbuh dan berkembang di dunia finansial modern.</p>
+    <img src="zicyrz gambar 1.jpg" alt="zicyrz">
+
+
+
+
+    
+    <div class="social-links">
+      <a href="https://twitter.com/@Sevenhokage99" class="twitter-x" target="_blank">Twitter / X</a>
+      <a href="https://instagram.com/@zic.yrz" class="instagram" target="_blank">Instagram</a>
+      <a href="https://github.com/zicseven-ship-it" class="github" target="_blank">GitHub</a>
+    </div>
+  </main>
+  
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 ZICYRZ</p>
+    <p>Masih tahap pertama dan akan update</p>
+  </footer>
+
+  <script>
+    // Sidebar toggle
+    function toggleMenu() {
+      let sidebar = document.getElementById("sidebar");
+      if (sidebar.style.width === "250px") {
+        sidebar.style.width = "0";
+      } else {
+        sidebar.style.width = "250px";
+      }
+    }
+  </script>
+</body>
+</html>
